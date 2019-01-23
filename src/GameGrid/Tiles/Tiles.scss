@@ -1,10 +1,18 @@
 .tiles-bts {
     display: block;
+    position: relative;
     width: calc(33.3% - 12px);
-    height: 25vh;
+    height: 0;
     border: solid 1px #000000;
     padding: 4px;
+    padding-bottom: 28%;
     margin: 6px;
     background: #ffffffd9;
     font-size: 5rem;
+
+    .tile-value {
+        position: absolute;
+        left: calc(50% - 25px);
+        top: calc(50% - 46px);
+    }
 }

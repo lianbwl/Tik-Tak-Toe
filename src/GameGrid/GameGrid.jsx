@@ -28,6 +28,7 @@ class GameGrid extends Component {
         board[i + 1] == board[i + 2]
       ) {
         this.setState({
+          isWinLineHidden: false,
           winLinePos: "r" + i
         }, () => {
           console.log(board[i] + " " + this.state.winLinePos + " -won horizontaly");
@@ -43,6 +44,7 @@ class GameGrid extends Component {
         board[i + 3] == board[i + 6]
       ) {
         this.setState({
+          isWinLineHidden: false,
           winLinePos: "c" + i
         }, () => {
           console.log(board[i] + " " + this.state.winLinePos + " -won vertically");
@@ -58,6 +60,7 @@ class GameGrid extends Component {
         board[i + j] === board[i + 2 * j]
       ) {
         this.setState({
+          isWinLineHidden: false,
           winLinePos: "d" + i
         }, () => {
           console.log(board[i] + " " + this.state.winLinePos + "-won diagonaly");
@@ -135,7 +138,7 @@ class GameGrid extends Component {
     return (
       <div className="container">
         <div className="grid">
-          {!this.state.isWinLineHidden && <WinLine position={this.state.winLinePos} isHidden={this.state.isWinLineHidden}/>}
+          {!this.state.isWinLineHidden && <WinLine position={this.state.winLinePos}/>}
           {this.state.gameboard.map((i, index) => {
             return this.tileBlock(index);
           })}

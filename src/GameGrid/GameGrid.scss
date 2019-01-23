@@ -1,5 +1,17 @@
 .container {
-    width: 70%;
+
+    @media (min-width: 1000px) {
+        width: 800px;
+    }
+
+    @media (max-width: 999px) and (min-width: 550px) {
+        width: 500px;
+    }
+
+    @media (max-width: 549px) {
+        width: 90%;
+    }
+
     margin: 0 auto;
     min-height: 200px;
 }
@@ -8,4 +20,5 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
 }

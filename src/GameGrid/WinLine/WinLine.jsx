@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./WinLine.scss";
 
 class WinLine extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class WinLine extends Component {
 
   render() {
     return (
-        <div className={"modal " + this.props.isHidden}>Hello, World!</div>
+        <div className={"line " + this.props.position}></div>
     );
   }
 }

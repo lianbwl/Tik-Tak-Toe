@@ -14,7 +14,7 @@ class Tiles extends Component {
   render() {
     return (
       <button className="tiles-bts" onClick={this.handleClick}>
-        {this.props.value}
+        <div className="tile-value">{this.props.value}</div>
       </button>
     );
   }
